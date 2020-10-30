@@ -1,49 +1,35 @@
-const express = require('express')
-const app = express()
-const port = 3333
-const API = require("call-of-duty-api")();
-
-require('dotenv/config');
-
-app.use(express.json());
-
-
-console.log(process.env.USER)
-console.log(process.env.PASSWORD)
-
-
-// GET - PEGAR INFORMAÇÃO
-// POST - VOCÊ ENVIA
-
-
-// PATH - VC EDITA UMA INFORMAÇÃO ESPECIFICA
-
-
-
-app.post('/',(req, res) => {
-
-  const {gamerTag, plataform} = req.body
-
-
-
-     API.login(process.env.USER, process.env.PASSWORD).then(() => {
-        API.MWwz(gamerTag, plataform)
-           .then((data) => {
-             res.send(data)
-             console.log(data); // see output
-           })
-           .catch((err) => {
-             console.log(err);
-             res.json({ error: err })
-           });
-       });
-
-
-  
-})
-
-
-
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`)
-})
+Today is gonna be the day
+That they're gonna throw it back to you
+By now you should've somehow
+Realized what you gotta do
+I don't believe that anybody
+Feels the way I do, about you now
+Backbeat, the word was on the street
+That the fire in your heart is out
+I'm sure you've heard it all before
+But you never really had a doubt
+I don't believe that anybody
+Feels the way I do about you now
+And all the roads we have to walk are winding
+And all the lights that lead us there are blinding
+There are many things that I
+Would like to say to you but I don't know how
+Because maybe, you're gonna be the one that saves me
+And after all, you're my wonderwall
+Today was gonna be the day
+But they'll never throw it back to you
+By now you should've somehow
+Realized what you're not to do
+I don't believe that anybody
+Feels the way I do, about you now
+And all the roads that lead you there are winding
+And all the lights that light the way are blinding
+There are many things that I
+Would like to say to you but I don't know how
+I said maybe, you're gonna be the one that saves me
+And after all, you're my wonderwall
+I said maybe, you're gonna be the one that saves me
+And after all, you're my wonderwall
+I said maybe, you're gonna be the one that saves me
+you're gonna be the one that saves me
+you're gonna be the one that saves me
